@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
-
     <head>
-
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>MySpotifyStats</title>
@@ -10,57 +8,53 @@
         <link rel="stylesheet" href="stylesheets/homestyle.css"/>
         <script defer src="scripts/carousel_script.js"></script>
     </head>
-
     <body>
-
-      <header>
-        <nav class="navbar">
-            <div class="logo-text">
-                MySpotifyStats
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-            </ul>
-            <div class="account-button">
-                <button>Account</button>
-            </div>
-        </nav>
-      </header>
-
         <main>
-
+            <div class="navbar">
+                <a href="#" class="brand-link">MySpotifyStats</a>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link">Top Tracks</a></li>
+                    <li><a href="#" class="nav-link">Top Artists</a></li>
+                    <li><a href="#" class="nav-link">Top Genres</a></li>
+                    <li><a href="#" class="nav-link">Recently Played</a></li>
+                </ul>
+                <button class="account-button" style="display: none;">Account</button>
+                <button class="top-login-button">Login</button>
+            </div>
             <div class="carousel-container">
                 <div class="carousel">
-                  <div class="slide">
-                    <div class="content">
-                      <img src="extras/ranking.png" alt="Slide 1">
-                      <p class="bigger_text">Personalized Charts.</p>
-                      <p class="smaller_text">Get the standings of your most listened to artist, tracks, and genres.</p>
+                    <div class="slide">
+                        <div class="content">
+                            <img src="extras/ranking.png" alt="Slide 1">
+                            <p class="bigger_text">Personalized Rankings.</p>
+                            <p class="smaller_text">Get the standings of your most listened to artist, tracks, and genres.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="slide">
-                    <div class="content">
-                      <img src="placeholder2.jpg" alt="Slide 2">
-                      <p>Slide 2 content</p>
+                    <div class="slide">
+                        <div class="content">
+                            <img src="extras/pie-chart.png" alt="Slide 2">
+                            <p class="bigger_text">Your top genres.</p>
+                            <p class="smaller_text">View a detailed look at your favourite style.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="slide">
-                    <div class="content">
-                      <img src="placeholder3.jpg" alt="Slide 3">
-                      <p>Slide 3 content</p>
+                    <div class="slide">
+                        <div class="content">
+                            <img src="extras/recent.png" alt="Slide 3">
+                            <p class="bigger_text">What song was that?</p>
+                            <p class="smaller_text">Get a list of what you listened to, and when.</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <button class="carousel-prev">◀</button>
                 <button class="carousel-next">▶</button>
-              </div>
-
-
+            </div>
+            <div class="bottomrow">
+                <div></div>
+                <div class="bigger_text_white">Login with your spotify account</div>
+                <div></div>
+                <div></div>
+                <button class="login_button">Login</button>
+            </div>
         </main>
-
     </body>
-
 </html>
