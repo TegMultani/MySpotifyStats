@@ -4,9 +4,10 @@
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>MySpotifyStats</title>
-        <link rel="shortcut icon" href="extras/note.ico"/>
-        <link rel="stylesheet" href="stylesheets/homestyle.css"/>
-        <script defer src="scripts/carousel_script.js"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/note.ico')}}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/homestyle.css')}}"/>
+        <script defer src='{{ url_for("static", filename="scripts/carousel_script.js") }}'></script>
+        
     </head>
     <body>
         <main>
@@ -25,21 +26,21 @@
                 <div class="carousel">
                     <div class="slide">
                         <div class="content">
-                            <img src="extras/ranking.png" alt="Slide 1">
+                            <img src="{{ url_for('static', filename='images/ranking.png')}}" alt="Slide 1">
                             <p class="bigger_text">Personalized Rankings.</p>
                             <p class="smaller_text">Get the standings of your most listened to artist, tracks, and genres.</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="content">
-                            <img src="extras/pie-chart.png" alt="Slide 2">
+                            <img src="{{ url_for('static', filename='images/pie-chart.png')}}" alt="Slide 2">
                             <p class="bigger_text">Your top genres.</p>
                             <p class="smaller_text">View a detailed look at your favourite style.</p>
                         </div>
                     </div>
                     <div class="slide">
                         <div class="content">
-                            <img src="extras/recent.png" alt="Slide 3">
+                            <img src="{{ url_for('static', filename='images/note.png')}}" alt="Slide 3">
                             <p class="bigger_text">What song was that?</p>
                             <p class="smaller_text">Get a list of what you listened to, and when.</p>
                         </div>
