@@ -1,3 +1,4 @@
 .cache
 *.json
-website/extras/
+website/test.py
+website/test2.py

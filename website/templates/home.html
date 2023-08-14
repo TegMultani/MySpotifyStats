@@ -12,15 +12,19 @@
     <body>
         <main>
             <div class="navbar">
-                <a href="#" class="brand-link">MySpotifyStats</a>
+                <a href="{{url_for('home_page')}}" class="brand-link">MySpotifyStats</a>
                 <ul class="nav-links">
-                    <li><a href="#" class="nav-link">Top Tracks</a></li>
+                    <li><a href="{{url_for('top_tracks')}}" class="nav-link">Top Tracks</a></li>
                     <li><a href="#" class="nav-link">Top Artists</a></li>
                     <li><a href="#" class="nav-link">Top Genres</a></li>
                     <li><a href="#" class="nav-link">Recently Played</a></li>
                 </ul>
-                <button class="account-button" style="display: none;">Account</button>
-                <button class="top-login-button">Login</button>
+                {% if logged_status %}
+                <!-- <a class="account-link">Account</a> ADD THIS BACK AFTER-->
+                <a class="signout-link" href="{{url_for('sign_out')}}">Sign Out</a>
+                {% else %}
+                <a class="top-login-link" href="{{url_for('authorize')}}">Login</a>
+                {% endif %}
             </div>
             <div class="carousel-container">
                 <div class="carousel">
@@ -50,11 +54,19 @@
                 <button class="carousel-next">▶</button>
             </div>
             <div class="bottomrow">
+                {% if logged_status == False %}
                 <div></div>
                 <div class="bigger_text_white">Login with your spotify account</div>
                 <div></div>
                 <div></div>
-                <button class="login_button">Login</button>
+                <a class="login_link" href="{{url_for('authorize')}}">Login</a>
+                {% else %}
+                <div></div>
+                <div class="bigger_text_white">Welcome {{ username }}!</div>
+                <div></div>
+                <div></div>
+                <a class="login_link" href="{{url_for('top_tracks')}}">View Stats</a>
+                {% endif %}
             </div>
         </main>
     </body>

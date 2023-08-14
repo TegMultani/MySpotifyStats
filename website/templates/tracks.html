@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Top Tracks - MySpotifyStats</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/note.ico')}}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/liststyle.css')}}"/>
+        <script defer src='{{ url_for("static", filename="scripts/carousel_script.js") }}'></script>
+        
+    </head>
+    <body>
+        <main>
+            <div class="navbar">
+                <a href="{{url_for('home_page')}}" class="brand-link">MySpotifyStats</a>
+                <ul class="nav-links">
+                    <li><a href="{{url_for('top_tracks')}}" class="nav-link">Top Tracks</a></li>
+                    <li><a href="#" class="nav-link">Top Artists</a></li>
+                    <li><a href="#" class="nav-link">Top Genres</a></li>
+                    <li><a href="#" class="nav-link">Recently Played</a></li>
+                </ul>
+                <!-- <a class="account-link">Account</a> ADD THIS BACK AFTER-->
+                <a class="signout-link" href="{{url_for('sign_out')}}">Sign Out</a>
+            </div>
+            <div class="bigger_text_white" style="margin: 25px auto 30px auto;">Top Tracks - Last 4 Weeks</div>
+
+            <table class="song-table">
+                {% for song in top_songs %}
+                <tr>
+                    <td class="rank-number"><strong>{{ song.rank }}</strong></td>
+                    <td class="space"></td>
+                    <td class="track-image">
+                        <img src="{{ song.image_url }}" loading="lazy" class="song-image clickable" width="64" height="64">
+                    </td>
+                    <td class="space"></td>
+                    <td class="track-detail">
+                        <div class="container">
+                            <div class="row">
+                                <div style="color: white;">{{ song.name }}</div>
+                                <div class="artist-name">{{ song.artists }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 32px; height: 32px;">
+                        <img src="{{ url_for('static', filename='/images/spotilogo.png')}}" title="Open this track on Spotify" class="spotify-link" style="margin-left: 5px;">
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </main>
+    </body>
+</html>
