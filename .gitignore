@@ -2,3 +2,4 @@
 *.json
 website/test.py
 website/test2.py
+website/.flask_session/

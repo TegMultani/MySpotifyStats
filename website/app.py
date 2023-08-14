@@ -80,7 +80,7 @@ def top_tracks():
             l = {}
             l['rank'] = r
             l['image_url'] = item['album']['images'][2]['url']
-            l['name'] = item['album']['name']
+            l['name'] = item['name']
             artist_names = [artist["name"] for artist in item["artists"]]
             l['artists'] = ", ".join(artist_names)
             top_songs.append(l)
@@ -97,4 +97,4 @@ def sign_out():
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(threaded=True, debug=True)
+    app.run(host='192.168.1.104', threaded=True, debug=True)
