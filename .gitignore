@@ -1,5 +1,6 @@
 .cache
 *.json
-website/__pycache__
+website/__pycache__/
 .env
 *.env
+website/.flask_session/
