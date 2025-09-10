@@ -11,8 +11,3 @@ MySpotifyStats is web application that allows users to view their top Spotify tr
 ![App Screenshot](https://github.com/TegMultani/MySpotifyStats/blob/master/rmShow1.png)
 
 ![App Screenshot](https://github.com/TegMultani/MySpotifyStats/blob/master/rmShow2.png)
-
-
-## WIP
-
-Currently only the Top Tracks page is complete.
